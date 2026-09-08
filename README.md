@@ -1,1 +1,277 @@
-# Flores
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de las Flores Amarillas 🌻</title>
+    <!-- Importar fuentes elegantes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #FFFDF9;
+            --text-main: #3A3532;
+            --accent-yellow: #FFD166;
+            --accent-light-yellow: #FFF3B0;
+            --leaf-green: #6A994E;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--accent-light-yellow) 100%);
+            position: relative;
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #665C54;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            color: #2D2825;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeIn 1.5s ease 0.3s forwards;
+        }
+
+        .sunflower-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        .scroll-down {
+            margin-top: 2rem;
+            background: var(--accent-yellow);
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4);
+            text-decoration: none;
+        }
+
+        .scroll-down:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 209, 102, 0.6);
+            background-color: #ffc740;
+        }
+
+        /* Contenedor Principal */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        /* Secciones */
+        .section-card {
+            background: var(--card-bg);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(58, 53, 50, 0.04);
+            border: 1px solid rgba(255, 209, 102, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-card h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            color: #2D2825;
+            text-align: center;
+        }
+
+        .section-card p {
+            font-size: 1.05rem;
+            color: #554D47;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Galería */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .polaroid {
+            background: white;
+            padding: 12px 12px 25px 12px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .polaroid:hover {
+            transform: scale(1.03) rotate(1deg);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .polaroid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+        .polaroid span {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #665C54;
+        }
+
+        /* Dedicatoria */
+        .dedication-box {
+            background: linear-gradient(135deg, #FFFDF9 0%, #FFF9E6 100%);
+            border-left: 4px solid var(--accent-yellow);
+            padding: 2.5rem;
+            border-radius: 0 20px 20px 0;
+            font-style: italic;
+            margin-top: 2rem;
+        }
+
+        .signature {
+            text-align: right;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            font-style: normal;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: #2D2825;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            font-size: 0.9rem;
+            color: #776D65;
+            background-color: #F7F3EC;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsivo para móviles */
+        @media(max-width: 600px) {
+            h1 { font-size: 2.4rem; }
+            .section-card { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sección de Bienvenida -->
+    <header>
+        <div class="sunflower-icon">🌻</div>
+        <div class="subtitle">"Hay días que se quedan a vivir en la memoria para siempre..."</div>
+        <h1>Feliz Día de las Flores Amarillas</h1>
+        <a href="#contenido" class="scroll-down">Descubre la magia 👇</a>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main id="contenido">
+
+        <!-- Sección Significado -->
+        <section class="section-card">
+            <h2>¿Por qué el amarillo?</h2>
+            <p>
+                Regalar flores amarillas no es solo un detalle; es un símbolo luminoso de alegría, de energía positiva, de deseos de un futuro brillante y, sobre todo, de decir: <em>"Quiero que seas muy feliz hoy y siempre"</em>.
+            </p>
+            <p>
+                Este color representa el sol en los días grises, la complicidad, la amistad profunda y un cariño sincero que florece sin prisa pero sin pausa.
+            </p>
+        </section>
+
+        <!-- Sección Galería -->
+        <section class="section-card">
+            <h2>Destellos de luz</h2>
+            <div class="gallery">
+                <div class="polaroid">
+                    <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=500&q=80" alt="Girasol">
+                    <span>Como girasoles buscando siempre la luz.</span>
+                </div>
+                <div class="polaroid">
+                    <img src="https://images.unsplash.com/photo-1533619239233-6280475a633a?auto=format&fit=crop&w=500&q=80" alt="Flores amarillas">
+                    <span>Detalles pequeños que iluminan el alma.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Dedicatoria -->
+        <section class="section-card">
+            <h2>Una dedicatoria especial</h2>
+            <div class="dedication-box">
+                <p>
+                    "Dicen que las mejores sorpresas llegan sin avisar, al igual que las flores que alegran una mañana cualquiera. Hoy el mundo se pinta de amarillo, y no pude evitar pensar en ti al ver este color tan lleno de vida."
+                </p>
+                <p style="margin-top: 1rem;">
+                    "Gracias por ser luz, por tu alegría contagiosa y por hacer que cada día ordinario se sienta extraordinario. Este pequeño rincón digital es solo una excusa para recordarte lo mucho que vales y lo importante que eres."
+                </p>
+                <div class="signature">
+                    Con todo mi cariño 💛
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Creado con calidez y muchos detalles para ti. 🌻</p>
+    </footer>
+
+</body>
+</html># Flores
