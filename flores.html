@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Las Flores Amarillas 🌼</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- PANTALLA DE BIENVENIDA -->
+    <!-- ============================= -->
+
+    <div id="intro">
+
+        <div class="flowers">
+            🌼
+            🌼
+            🌼
+        </div>
+
+        <div class="intro-content">
+
+            <div class="macaw">
+                🦜
+            </div>
+
+            <p class="small-title">
+                BIENVENIDA AMOR A
+            </p>
+
+            <h1>
+                Las Flores
+                <span>Amarillas</span>
+            </h1>
+
+            <p class="intro-text">
+              <b>  Tengo algo especial que decirte… </b>
+               <b></b>  Esta página tiene un solo motivo: tú</b>
+                Antes de continuar, prométeme que sonreirás.</b>
+                Preparé un pequeño rincón de mi corazón para ti.</b>
+            </p>
+
+            <button id="enterBtn">
+                Haz clic… hay algo que quiero que descubras.
+                <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="petals">
+            <span>🌼</span>
+            <span>🌼</span>
+            <span>🌼</span>
+            <span>🌼</span>
+            <span>🌼</span>
+        </div>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- PÁGINA PRINCIPAL -->
+    <!-- ============================= -->
+
+    <main id="website">
+
+        <!-- NAVBAR -->
+
+       
+
+
+        <!-- ============================= -->
+        <!-- HERO -->
+        <!-- ============================= -->
+
+        <section class="hero" id="inicio">
+<img src="o2.png" alt="chunchacha" class="img1">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="subtitle">
+                    ✦ BIENVENIDA ✦
+                </p>
+
+                <h2>
+                    CHUNCHACHITA
+                    <span>HERMOSA</span>
+                </h2>
+
+                <p>
+                 Para la persona que convierte mis días normales en momentos especiales. <br>
+                   Si las flores amarillas representan alegría, tú representas la mía. <br>
+                 Entre millones de personas, tuve la suerte de encontrarte a ti. <br>
+                  Desde que llegaste, mis días tienen un color diferente. <br>
+                  Tú eres ese detalle bonito que la vida decidió regalarme. <br>
+                </p>
+
+                <a href="#historia" class="main-button">
+                    Conoce nuestra historia
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="hero-flower flower-one">🌼</div>
+            <div class="hero-flower flower-two">🌼</div>
+            <div class="hero-flower flower-three">🌼</div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- HISTORIA -->
+        <!-- ============================= -->
+
+        <section class="history" id="historia">
+
+            <div class="history-text">
+
+                <p class="section-label">
+                    un mes
+                </p>
+
+                <h2>
+                    Una historia
+                    <span>que florece</span>
+                </h2>
+
+                <p>
+                    Sé que esta es nuestra segunda vez celebrando esta fecha, pero esta vez es mucho más especial porque ahora eres mi enamorada. 💛
+
+Te regalo estas flores amarillas como un pequeño detalle para recordarte lo mucho que te quiero. Espero que sigamos compartiendo muchos momentos, celebrando más fechas y construyendo juntos muchos recuerdos bonitos.
+
+Gracias por estar en mi vida. Te quiero muchísimo. 🌻
+                </p>
+
+
+              
+            </div>
+
+
+            <div class="quote-box">
+
+                <div class="quote-flower">
+                    🌼
+                </div>
+
+                <p>
+                    “El amarillo no es solamente
+                    un color...
+                    <br>
+                    es un sentimiento
+                    que nos une.”
+                </p>
+
+                <span>
+                    ✦
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TRADICIÓN -->
+        <!-- ============================= -->
+
+
+
+        <!-- ============================= -->
+        <!-- GALERÍA -->
+        <!-- ============================= -->
+
+     
+
+        <!-- ============================= -->
+        <!-- FRASE FINAL -->
+        <!-- ============================= -->
+
+        <section class="final-message">
+
+            <div class="final-flower">
+                🌼
+            </div>
+
+            <p>
+                Porque las mejores historias
+                siempre comienzan con una sonrisa...
+            </p>
+
+            <h2>
+                ¡Sigamos floreciendo juntos!
+            </h2>
+
+            <div class="final-line"></div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- FOOTER -->
+        <!-- ============================= -->
+
+      
+
+  
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
+    <script>
+
+        const enterBtn = document.getElementById("enterBtn");
+        const intro = document.getElementById("intro");
+        const website = document.getElementById("website");
+
+        enterBtn.addEventListener("click", function () {
+
+            intro.classList.add("hide");
+
+            setTimeout(() => {
+
+                website.classList.add("show");
+
+            }, 500);
+
+        });
+
+    </script>
+
+</body>
+</html>
